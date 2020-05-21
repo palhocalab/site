@@ -213,6 +213,18 @@ a:hover {
   transform: scale(1.2) rotate(-2deg);
 }
 
+.a-equipe {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+.a-equipe:hover {
+  transform: scale(1.2) rotate(-2deg);
+}
+
 .projetos .grid {
   display: grid;
   gap: 2em;
