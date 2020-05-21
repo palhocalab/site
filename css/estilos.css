@@ -18,11 +18,17 @@ body {
   body {
     font-size: 14px;
   }
+
+  .titulo {
+    transform: scale(0.5)
+  }
 }
 
 /* breakpoint */
 @media (min-width: 600px) {
   body {
+    background-attachment: fixed;
+    background-size: cover;
     font-size: 18px;
   }
 }
@@ -30,6 +36,7 @@ body {
 /* breakpoint */
 @media (min-width: 1200px) {
   body {
+
     font-size: 20px;
   }
 }
@@ -82,7 +89,7 @@ a:hover {
 .titulo {
   transform: scale(0.2) translateY(50vh);
   opacity: 0;
-  animation: 1 ease 2s animacaoTitulo forwards;
+  animation: 1 ease 1s animacaoTitulo forwards;
 }
 
 @keyframes animacaoTitulo {
@@ -113,6 +120,7 @@ a:hover {
  line-height: 1.8em;
 }
 
+.sobre,
 .contato,
 .equipe,
 .projetos {
@@ -120,6 +128,15 @@ a:hover {
   min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
 .contato h2,
 .equipe h2,
 .projetos h2 {
@@ -127,6 +144,36 @@ a:hover {
   color: whitesmoke;
   margin-bottom: 1.5em;
   font-size: 2em;
+}
+
+.sobre p {
+  color: white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: magenta;
+}
+
+.sobre .avatar {
+  /*clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    /*clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);*/
+    float: right;
+  }
 }
 
 .equipe .grid {
@@ -165,10 +212,6 @@ a:hover {
 .img-equipe:hover {
   transform: scale(1.2) rotate(-2deg);
 }
-
-
-
-
 
 .projetos .grid {
   display: grid;
