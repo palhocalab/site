@@ -14,22 +14,27 @@ body {
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   body {
+    justify-content: center;
     font-size: 14px;
   }
 
-  .titulo {
+  .img-titulo {
     transform: scale(0.5)
   }
 }
 
 /* breakpoint */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   body {
     background-attachment: fixed;
     background-size: cover;
+    justify-content: center;
     font-size: 18px;
+  }
+  .img-titulo {
+    transform: scale(0.8)
   }
 }
 
